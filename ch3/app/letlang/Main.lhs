@@ -41,3 +41,8 @@
 >   let val = value_of_program expression
 >   putStrLn (show val)
 
+> parser text = do
+>     parsing False
+>        parserSpec ((), 1, 1, text)
+>        (aLexer lexerSpec)
+>        (fromToken (endOfToken lexerSpec))
