@@ -46,3 +46,10 @@
 >        parserSpec ((), 1, 1, text)
 >        (aLexer lexerSpec)
 >        (fromToken (endOfToken lexerSpec))
+
+> run text = do
+>   expression <- parser text
+>   putStrLn (show expression)
+>
+>   let val = value_of_program expression
+>   putStrLn (show val)
