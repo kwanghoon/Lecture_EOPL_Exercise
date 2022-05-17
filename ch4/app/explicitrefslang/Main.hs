@@ -45,10 +45,12 @@ doProcess verbose fileName = do
   print val
 
 parser text = do
-    parsing False
+    parsed_expression <- parsing False
        parserSpec ((), 1, 1, text)
        (aLexer lexerSpec)
        (fromToken (endOfToken lexerSpec))
+    let expression = expFrom parsed_expression
+    return expression
 
 run text = do
   expression <- parser text
