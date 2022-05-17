@@ -1,0 +1,10 @@
+let x = newref(0)
+in letrec even(d) = if zero?(deref(x)) 
+                   then 1
+                   else let d = setref(x, -(deref(x),1))
+                        in (odd d)
+          odd(d)  = if zero?(deref(x)) 
+                   then 0
+                   else let d = setref(x, -(deref(x),1))
+                        in (even d)
+   in let d = setref(x,13) in (odd -100)

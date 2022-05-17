@@ -1,0 +1,23 @@
+(CFG "Expression'" [
+ ProductionRule "Expression'" [Nonterminal "Expression"],
+ ProductionRule "Expression" [Terminal "integer_number"],
+ ProductionRule "Expression" [Terminal "-", Terminal "integer_number"],
+ ProductionRule "Expression" [Terminal "-", Terminal "(", Nonterminal "Expression", Terminal ",", Nonterminal "Expression", Terminal ")"],
+ ProductionRule "Expression" [Terminal "zero?", Terminal "(", Nonterminal "Expression", Terminal ")"],
+ ProductionRule "Expression" [Terminal "if", Nonterminal "Expression", Terminal "then", Nonterminal "Expression", Terminal "else", Nonterminal "Expression"],
+ ProductionRule "Expression" [Terminal "identifier"],
+ ProductionRule "Expression" [Terminal "let", Terminal "identifier", Terminal "=", Nonterminal "Expression", Terminal "in", Nonterminal "Expression"],
+ ProductionRule "Expression" [Terminal "letrec", Nonterminal "LetRecBindings", Terminal "in", Nonterminal "Expression"],
+ ProductionRule "Expression" [Terminal "proc", Terminal "(", Terminal "identifier", Terminal ")", Nonterminal "Expression"],
+ ProductionRule "Expression" [Terminal "(", Nonterminal "Expression", Nonterminal "Expression", Terminal ")"],
+ ProductionRule "Expression" [Terminal "begin", Nonterminal "ExpressionList", Terminal "end"],
+ ProductionRule "Expression" [Terminal "set", Terminal "identifier", Terminal "=", Nonterminal "Expression"],
+ ProductionRule "LetRecBindings" [Terminal "identifier", Terminal "(", Terminal "identifier", Terminal ")", Terminal "=", Nonterminal "Expression"],
+ ProductionRule "LetRecBindings" [Terminal "identifier", Terminal "(", Terminal "identifier", Terminal ")", Terminal "=", Nonterminal "Expression", Nonterminal "LetRecBindings"],
+ ProductionRule "ExpressionList" [Nonterminal "Expression"],
+ ProductionRule "ExpressionList" [Nonterminal "Expression", Terminal ";", Nonterminal "ExpressionList"]
+ ]
+,
+TokenAttrs [],
+ProdRuleAttrs [],
+"$")

@@ -1,0 +1,6 @@
+let g = let counter = newref(0) 
+         in proc (dummy) begin
+                           setref(counter, -(deref(counter),-1));
+                           deref(counter)
+                         end
+in -((g 11),(g 22))

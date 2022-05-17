@@ -1,0 +1,2 @@
+let x = newref(17) 
+in begin setref(x,27); deref(x) end
