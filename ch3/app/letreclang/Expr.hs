@@ -8,9 +8,9 @@ data Exp =
   | IsZero_Exp Exp
   | If_Exp     Exp Exp Exp
   | Var_Exp    Identifier
-  | Let_Exp    Identifier Exp Exp
-  | Letrec_Exp Identifier Identifier Exp Exp -- letrec f(x) = ... recusive expr ...
-  | Proc_Exp   Identifier Exp                -- proc
+  | Let_Exp    Identifier Exp Exp            -- let x = exp in exp 
+  | Letrec_Exp Identifier Identifier Exp Exp -- letrec f(arg) = ... recusive expr ... in ... f ... 
+  | Proc_Exp   Identifier Exp                -- proc (arg) exp 
   | Call_Exp   Exp Exp                       -- call
   deriving Show
 
