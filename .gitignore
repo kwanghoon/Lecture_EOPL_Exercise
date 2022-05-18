@@ -2,3 +2,8 @@
 *.pdf
 *.log
 *.aux
+goto_table*.txt
+action_table*.txt
+*.grm
+*.grm.hash
+prod_rules*.txt
