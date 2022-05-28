@@ -11,19 +11,20 @@
  - This repository is for exercises that needs to be filled with one's own solution.
  - A solution is available separately and privately. 
 
-### Chapter 1
+
+#### Chapter 1
 
  - Recursively defined data types
 
 
-### Chapter 2 
+#### Chapter 2 
 
  - Environment (representation)
 
  - Abstract syntax and its representation
 
 
-### Chapter 3
+#### Chapter 3
 
  - Let language
 
@@ -32,13 +33,13 @@
  - Letrec language
 
 
-### Chapter 4
+#### Chapter 4
 
  - Explicit reference language
 
  - Implicit reference language
 
-### Chapter 5
+#### Chapter 5
 
  - letrec language with continuation-based interpreter
 
