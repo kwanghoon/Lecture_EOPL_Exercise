@@ -7,7 +7,7 @@
  - It consists of a series of small but interesting programming languages and interpreters. 
  - The interpreters are written in Scheme. 
 
-## This github repository contains the EOPL interpreters rewritten in Haskell.
+## This is a series of EOPL interpreters reimplemented in Haskell.
  - This repository is for exercises that needs to be filled with one's own solution.
  - A solution is available separately and privately. 
 
