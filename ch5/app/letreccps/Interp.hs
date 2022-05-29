@@ -18,21 +18,21 @@ data Cont =
   | Rand_Cont ExpVal Cont
 
 apply_cont :: Cont -> ExpVal -> FinalAnswer
-apply_cont End_Cont v = error "TODO: implement a apply_cont function"
+apply_cont End_Cont v = error "TODO: implement an apply_cont function"
 
-apply_cont (Zero1_Cont cont) num1 = error "TODO: implement a apply_cont function"
+apply_cont (Zero1_Cont cont) num1 = error "TODO: implement an apply_cont function"
     
-apply_cont (Let_Exp_Cont var body env cont) val1 = error "TODO: implement a apply_cont function"
+apply_cont (Let_Exp_Cont var body env cont) val1 = error "TODO: implement an apply_cont function"
 
-apply_cont (If_Test_Cont exp2 exp3 env cont) v = error "TODO: implement a apply_cont function"
+apply_cont (If_Test_Cont exp2 exp3 env cont) v = error "TODO: implement an apply_cont function"
   
-apply_cont (Diff1_Cont exp2 env cont) val1 = error "TODO: implement a apply_cont function"
+apply_cont (Diff1_Cont exp2 env cont) val1 = error "TODO: implement an apply_cont function"
 
-apply_cont (Diff2_Cont val1 cont) val2 = error "TODO: implement a apply_cont function"
+apply_cont (Diff2_Cont val1 cont) val2 = error "TODO: implement an apply_cont function"
 
-apply_cont (Rator_Cont rand env cont) ratorVal = error "TODO: implement a apply_cont function"
+apply_cont (Rator_Cont rand env cont) ratorVal = error "TODO: implement an apply_cont function"
 
-apply_cont (Rand_Cont ratorVal cont) randVal = error "TODO: implement a apply_cont function"
+apply_cont (Rand_Cont ratorVal cont) randVal = error "TODO: implement an apply_cont function"
 
 
 --
@@ -67,4 +67,4 @@ value_of_program exp = error "TODO: implement a value_of_program function"
 --
 apply_procedure_k :: Proc -> ExpVal -> Cont -> FinalAnswer
 apply_procedure_k proc arg cont =
-  error "TODO: implement a apply_procedure_k function"
+  error "TODO: implement an apply_procedure_k function"
