@@ -9,8 +9,8 @@
  - https://github.com/mwand/eopl3
 
 ## A series of EOPL interpreters written in Haskell.
- - Note: This repository is just for exercises that requires students
-   to fill in missing codes, and a solution is available separately.
+ - Note: This repository is for exercises in which students are asked
+   to complete, and a solution is available separately.
 
 
 #### Chapter 1
