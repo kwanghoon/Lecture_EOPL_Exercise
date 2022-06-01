@@ -1,15 +1,16 @@
 # The Essentials of Programming Languages (EOPL) in Haskell
 
 ## What is EOPL?
- - It is a programming language semantics book titled with Essentials of Progarmming Languages.
+ - Essentials of Progarmming Languages, the title for a programming
+   language semantics book consisting of a series of small but
+   interesting programming languages and interpreters written in
+   Scheme.
  - https://eopl3.com/
  - https://github.com/mwand/eopl3
- - It consists of a series of small but interesting programming languages and interpreters. 
- - The interpreters are written in Scheme. 
 
-## This is a series of EOPL interpreters reimplemented in Haskell.
- - This repository is for exercises that needs to be filled with one's own solution.
- - A solution is available separately and privately. 
+## A series of EOPL interpreters written in Haskell.
+ - Note: This repository is just for exercises that requires students
+   to fill in missing codes, and a solution is available separately.
 
 
 #### Chapter 1
