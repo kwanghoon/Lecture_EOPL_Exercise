@@ -49,6 +49,9 @@
  - threads with continuation-based interpreter
 
 
+## For studying basic Haskell programming
+ - https://haskell.mooc.fi
+ - [YouTube](https://www.youtube.com/playlist?list=PLhbaMvGyp99_NphAX7k5OqcM1fXLZne8t)
 
 
 
