@@ -17,7 +17,7 @@ apply_env Empty_env search_var = error (search_var ++ " is not found.")
 apply_env (Extend_env saved_var saved_val saved_env) search_var
   | search_var==saved_var = saved_val
   | otherwise             = apply_env saved_env search_var
-apply_env (Extend_env_rec p_name b_var p_body saved_env) search_var
+apply_env (Extend_env_rec p_name b_var p_body saved_env) search_var =
   error "TODO: implement an apply_env function for Extend_env_rec"
 
 extend_env :: Identifier -> ExpVal -> Env -> Env
