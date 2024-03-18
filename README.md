@@ -9,7 +9,7 @@
  - This repository hosts exercises designed for students to complete, with solutions provided separately.
 
 
-#### Chapter 3. Expressions
+#### [Chapter 3. Expressions](https://docs.google.com/presentation/d/1ZU9TEcEN9BEZoBmavD_Ivvt39TXUnbsXqZHdJBvba1k/edit?usp=sharing)
  - Let 
  - Proc 
  - Letrec 
