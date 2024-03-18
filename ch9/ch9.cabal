@@ -1,0 +1,92 @@
+cabal-version: 2.2
+
+-- This file has been generated from package.yaml by hpack version 0.36.0.
+--
+-- see: https://github.com/sol/hpack
+
+name:           ch9
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/kwanghoon/Lecture_EOPL_Exercise>
+homepage:       https://github.com/kwanghoon/Lecture_EOPL_Exercise#readme
+bug-reports:    https://github.com/kwanghoon/Lecture_EOPL_Exercise/issues
+author:         Kwanghoon Choi
+maintainer:     lazyswamp@gmail.com
+copyright:      2024 Kwanghoon Choi
+license:        BSD-3-Clause
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    CHANGELOG.md
+
+source-repository head
+  type: git
+  location: https://github.com/kwanghoon/Lecture_EOPL_Exercise
+  subdir: ch9
+
+library
+  exposed-modules:
+      Lib
+  other-modules:
+      Paths_ch9
+  autogen-modules:
+      Paths_ch9
+  hs-source-dirs:
+      src
+  build-depends:
+      base >=4.7 && <5
+    , containers
+    , hspec
+    , yapb >=0.2.3
+  default-language: Haskell2010
+
+executable classes-exe
+  main-is: Main.hs
+  other-modules:
+      EnvStore
+      Expr
+      Interp
+      Lexer
+      Parser
+      Ref
+      Token
+      Paths_ch9
+  autogen-modules:
+      Paths_ch9
+  hs-source-dirs:
+      app/classes
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , ch9
+    , containers
+    , hspec
+    , yapb >=0.2.3
+  default-language: Haskell2010
+
+test-suite classes-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      EnvStore
+      Expr
+      Interp
+      Lexer
+      Main
+      Parser
+      Ref
+      Token
+      Paths_ch9
+  autogen-modules:
+      Paths_ch9
+  hs-source-dirs:
+      test/classes
+      app/classes
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , ch9
+    , containers
+    , hspec
+    , yapb >=0.2.3
+  default-language: Haskell2010
