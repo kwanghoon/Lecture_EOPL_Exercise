@@ -37,5 +37,9 @@
  - [Haskell MOOC](https://haskell.mooc.fi)
  - [YouTube](https://www.youtube.com/playlist?list=PLhbaMvGyp99_NphAX7k5OqcM1fXLZne8t)
 
+## Authors
+- Kwanghoon Choi <kwanghoon.choi@jnu.ac.kr>
 
+## About SWLAB
+- SWLAB, short for Software Languages and Systems Laboratory, is located at Chonnam National University in Gwangju, Republic of Korea. Our focus is on the research and development of programming languages, compilers, and software engineering. For more information, please visit [our website](https://kwanghoon.github.io).
 
