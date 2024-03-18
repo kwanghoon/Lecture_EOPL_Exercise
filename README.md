@@ -25,10 +25,10 @@
  - Exceptions
  - Threads
 
-#### Chapter 7
+#### Chapter 7. Types
  - Checked
 
-#### Chapter 9
+#### Chapter 9. Classes and Objects
  - Classes
 
 
