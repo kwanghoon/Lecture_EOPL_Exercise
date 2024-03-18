@@ -7,3 +7,4 @@ action_table*.txt
 *.grm
 *.grm.hash
 prod_rules*.txt
+.stack-work
