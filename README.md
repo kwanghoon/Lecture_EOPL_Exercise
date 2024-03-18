@@ -9,7 +9,7 @@
  - This repository hosts exercises designed for students to complete, with solutions provided separately.
 
 #### Chapter 0. Overview
- - [Chapter 0. Fundamentals of Haskell Programming](https://docs.google.com/presentation/d/1fhXvoLHFgYE4AOfdl4MD_Puk7Vbj-8eKqquTi7b0t9I/edit?usp=sharing)
+ - [Fundamentals of Haskell Programming](https://docs.google.com/presentation/d/1fhXvoLHFgYE4AOfdl4MD_Puk7Vbj-8eKqquTi7b0t9I/edit?usp=sharing)
  - [An overview of PLs](https://docs.google.com/presentation/d/1IG6xe4I1ao00jfyn-JGGBOQx3sWKLbf67eODpfxEXN0/edit?usp=sharing)
 
 #### [Chapter 1. Inductive Sets of Data](https://docs.google.com/presentation/d/1enC8Pp3dACVOm9VIc1lbJkUWfmLzGdE0237Aj5bARqg/edit?usp=sharing)
