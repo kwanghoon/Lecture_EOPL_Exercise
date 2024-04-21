@@ -24,7 +24,7 @@
  - Letrec 
 
 
-#### Chapter 4. States
+#### [Chapter 4. States](https://docs.google.com/presentation/d/1ZxFuia-KHExNJlXJXR7iEMQ_P7gVmAweVIVglJM7Ytg/edit?usp=sharing)
  - Explicit-ref
  - Implicit-ref
 
@@ -40,6 +40,8 @@
 #### Chapter 9. Classes and Objects
  - Classes
 
+## 동영상 강의
+ - [YouTube: 프로그래밍언어 설계 및 구현](https://www.youtube.com/playlist?list=PLhbaMvGyp99982CpQoam-z9tqJ6qi_hw0)
 
 ## For learning the fundamentals of Haskell programming
  - [www.haskell.org](https://www.haskell.org)
