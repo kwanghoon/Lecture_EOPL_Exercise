@@ -28,7 +28,7 @@
  - Explicit-ref
  - Implicit-ref
 
-#### Chapter 5. Continuation
+#### [Chapter 5. Continuation](https://docs.google.com/presentation/d/1I2Wl277VQRH2h8n-jc1W8IHnXNL5d_pzILJI07eRI6Y/edit?usp=sharing)
 
  - LetrecCPS
  - Exceptions
