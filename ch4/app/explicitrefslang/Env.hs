@@ -44,6 +44,7 @@ instance Show ExpVal where
   show (Num_Val num)   = show num
   show (Bool_Val bool) = show bool
   show (Proc_Val proc) = show "<proc>"
+  show (Ref_Val loc) = show loc
 
 -- Denoted values
 type DenVal = ExpVal   
