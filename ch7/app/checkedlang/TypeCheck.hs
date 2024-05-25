@@ -10,39 +10,36 @@ typeCheck exp = return (type_of_program exp )
 --
 type_of_program :: Exp -> Either String Type
 type_of_program exp = error "TODO: implement a type_of_program function"
-     
-initTyEnv :: TyEnv     
-initTyEnv = Map.empty 
 
 --
 type TyEnv = Map.Map Identifier Type
 
-type_of :: TyEnv -> Exp -> Either String Type
+type_of :: Exp -> TyEnv -> Either String Type
 
-type_of tyenv exp@(Const_Exp n) = error "TODO: implement a type_of function"
+type_of (Const_Exp n) tyenv = error "TODO: implement a type_of function"
 
-type_of tyenv exp@(Var_Exp var) =
+type_of (Var_Exp var) tyenv =
   error "TODO: implement a type_of function"
 
-type_of tyenv exp@(Diff_Exp exp1 exp2) =
+type_of (Diff_Exp exp1 exp2) tyenv =
   error "TODO: implement a type_of function"
 
-type_of tyenv exp@(IsZero_Exp exp1) =
+type_of (IsZero_Exp exp1) tyenv =
   error "TODO: implement a type_of function"
 
-type_of tyenv exp@(If_Exp exp1 exp2 exp3) =
+type_of exp@(If_Exp exp1 exp2 exp3) tyenv =
   error "TODO: implement a type_of function"
 
-type_of tyenv exp@(Let_Exp var exp1 body) =
+type_of (Let_Exp var exp1 body) tyenv =
   error "TODO: implement a type_of function"
 
-type_of tyenv exp@(Letrec_Exp ty proc_name bound_var bvar_ty proc_body letrec_body) =
+type_of (Letrec_Exp ty proc_name bound_var bvar_ty proc_body letrec_body) tyenv  =
   error "TODO: implement a type_of function"
 
-type_of tyenv exp@(Proc_Exp var argTy body) =
+type_of (Proc_Exp var argTy body) tyenv =
   error "TODO: implement a type_of function"
 
-type_of tyenv exp@(Call_Exp rator rand) =
+type_of (Call_Exp rator rand) tyenv =
   error "TODO: implement a type_of function"
 
          
@@ -52,6 +49,12 @@ apply_tyenv tyenv var =
   case Map.lookup var tyenv of
     Just ty -> Right ty
     Nothing -> Left $ "Variable not found: " ++ var
+
+empty_tyenv :: TyEnv 
+empty_tyenv = Map.empty 
+
+extend_tyenv :: Identifier -> Type -> TyEnv -> TyEnv
+extend_tyenv var ty tyenv = Map.insert var ty tyenv
 
 expectedButErr :: Type -> Type -> Exp -> Either String Type
 expectedButErr expectedTy gotTy exp =
