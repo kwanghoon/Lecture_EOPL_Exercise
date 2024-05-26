@@ -2,9 +2,9 @@ module TypeCheckerTest where
 
 import Expr
 
-typechecker_tests :: TypeDeclSuite
+typechecker_tests :: TypeDeclTestSuite
 typechecker_tests =
-  TypeDeclSuite
+  TypeDeclTestSuite
    [
      -- simple arithmetic
      

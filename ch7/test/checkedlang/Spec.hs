@@ -12,7 +12,7 @@ import Parser
 main :: IO ()
 main = mapM_ doTest $ typechecker_tests'
   where
-    TypeDecl typechecker_tests' = typechecker_tests
+    TypeDeclTestSuite typechecker_tests' = typechecker_tests
     doTest (TDTC tcname expr_text maybeResult) =
       do putStr $ tcname ++ " : "
 
