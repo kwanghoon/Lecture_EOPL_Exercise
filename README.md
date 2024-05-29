@@ -34,7 +34,7 @@
  - Exceptions
  - Threads
 
-#### Chapter 7. Types
+#### [Chapter 7. Types](https://docs.google.com/presentation/d/1Jl8IkUpaIn5Mtmd6kKeSiBLpvWwO6RjMoMq4brT8Oc8/edit?usp=sharing)
  - Checked
 
 #### Chapter 9. Classes and Objects
