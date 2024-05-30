@@ -3,6 +3,10 @@ module Scheduler where
 import EnvStore
 import Queue
 
+--
+timeslice = 5
+
+--
 initialize_scheduler :: Integer -> SchedState
 initialize_scheduler ticks =
   SchedState {
