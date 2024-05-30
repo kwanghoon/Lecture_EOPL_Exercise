@@ -21,7 +21,7 @@
 #### [Chapter 3. Expressions](https://docs.google.com/presentation/d/1ZU9TEcEN9BEZoBmavD_Ivvt39TXUnbsXqZHdJBvba1k/edit?usp=sharing)
  - Let 
  - Proc 
- - Letrec 
+ - Letrec
 
 
 #### [Chapter 4. States](https://docs.google.com/presentation/d/1ZxFuia-KHExNJlXJXR7iEMQ_P7gVmAweVIVglJM7Ytg/edit?usp=sharing)
@@ -40,6 +40,17 @@
 #### Chapter 9. Classes and Objects
  - Classes
 
+## 빌드 및 실행 방법
+ - cd ch3
+ - stack build (전체 빌드)
+ - stack build ch3:exe:letlang-exe (개별 빌드)
+ - stack run ch3:exe:letlang-exe (개별 실행)
+
+## 테스트 방법
+ - cd ch3
+ - stack test  (전체 테스트)
+ - stack test ch3:test:letlang-test (개별 테스트)
+   
 ## 동영상 강의
  - [YouTube: 프로그래밍언어 설계 및 구현](https://www.youtube.com/playlist?list=PLhbaMvGyp99982CpQoam-z9tqJ6qi_hw0)
 
