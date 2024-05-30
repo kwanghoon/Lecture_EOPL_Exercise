@@ -23,7 +23,7 @@ data Type =
     TyInt
   | TyBool
   | TyFun Type Type
-  deriving Show
+  deriving (Show, Eq)
 
 
 -- for parser
