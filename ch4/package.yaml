@@ -1,10 +1,10 @@
 name:                ch4
 version:             0.1.0.0
-github:              "kwanghoon/Lecture_EOPL_Exercise/ch4"
+github:              "githubuser/ch4"
 license:             BSD3
-author:              "Kwanghoon Choi"
-maintainer:          "lazyswamp@gmail.com"
-copyright:           "2024 Kwanghoon Choi"
+author:              "Author name here"
+maintainer:          "example@example.com"
+copyright:           "2022 Author name here"
 
 extra-source-files:
 - README.md
@@ -17,11 +17,12 @@ extra-source-files:
 # To avoid duplicated efforts in documentation and dealing with the
 # complications of embedding Haddock markup inside cabal files, it is
 # common to point users to the README.md file.
-description:         Please see the README on GitHub at <https://github.com/kwanghoon/Lecture_EOPL_Exercise>
+description:         Please see the README on GitHub at <https://github.com/githubuser/ch4#readme>
 
 dependencies:
 - base >= 4.7 && < 5
 - yapb >= 0.2.3
+- hspec
 
 library:
   source-dirs: src
@@ -48,9 +49,23 @@ executables:
     - ch4    
 
 tests:
-  ch4-test:
+  explicitrefslang-test:
     main:                Spec.hs
-    source-dirs:         test
+    source-dirs:         
+    - test/explicitrefslang
+    - app/explicitrefslang
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - ch4
+
+  implicitrefslang-test:
+    main:                Spec.hs
+    source-dirs:         
+    - test/implicitrefslang
+    - app/implicitrefslang
     ghc-options:
     - -threaded
     - -rtsopts
