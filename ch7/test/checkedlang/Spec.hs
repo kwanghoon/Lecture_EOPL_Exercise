@@ -16,11 +16,12 @@ main :: IO ()
 main = 
   hspec $ do 
     describe "exceptions" $ do
+      let atdir f = "checkedlang:" ++ f
       let TypeDeclTestSuite typechecker_tests' = typechecker_tests
 
       mapM_ 
        (\tdtcArg@(TDTC tcname _ maybeResult) -> 
-          (it(tcname) $ do
+          (it(atdir(tcname)) $ do
              result <- try (doTest tdtcArg) :: IO (Either SomeException ())
              case result of
                Left exn -> throw exn `shouldBe` maybeResult
@@ -30,7 +31,7 @@ main =
        typechecker_tests'
   
 doTest (TDTC tcname expr_text maybeResult) =
-  do  putStr $ tcname ++ " : "
+  do  -- putStr $ tcname ++ " : "
 
       expressionAst <-
           parsing False
@@ -49,10 +50,10 @@ doTest (TDTC tcname expr_text maybeResult) =
                 putStrLn ("Expected " ++ show ty' ++ " but got " ++ errMsg ++ " in " ++ show expression)
               Right ty -> 
                 if equalType ty ty'
-                    then putStrLn "Successfully typechecked."
+                    then putStr "" -- putStrLn "Successfully typechecked."
                     else putStrLn ("Expected " ++ show ty' ++ " but got " ++ show ty ++ " in " ++ show expression)
         Nothing ->
           do eitherTyOrErr <- typeCheck (Let_Exp "x" (Const_Exp 1) expression)
              case eitherTyOrErr of
-              Left errMsg -> putStrLn "Successfully type-unchecked." -- Is it the same error?
-              Right ty -> putStrLn "Should not be typechecked."
+              Left errMsg -> putStr "" -- putStrLn "Successfully type-unchecked." -- Is it the same error?
+              Right ty -> putStr "" -- putStrLn "Should not be typechecked."
