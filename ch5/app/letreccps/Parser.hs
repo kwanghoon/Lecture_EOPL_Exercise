@@ -51,10 +51,10 @@ parserSpec = ParserSpec
     ],
     
     baseDir        = "./",
-    actionTblFile  = "action_table_letreclang.txt",
-    gotoTblFile    = "goto_table_letreclang.txt",
-    grammarFile    = "prod_rules_letreclang.txt",
-    parserSpecFile = "mygrammar_letreclang.grm",
+    actionTblFile  = "action_table_letreccps.txt",
+    gotoTblFile    = "goto_table_letreccps.txt",
+    grammarFile    = "prod_rules_letreccps.txt",
+    parserSpecFile = "mygrammar_letreccps.grm",
     genparserexe   = "yapb-exe"
   }
 
