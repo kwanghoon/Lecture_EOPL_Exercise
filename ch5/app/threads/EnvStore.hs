@@ -2,6 +2,7 @@ module EnvStore where
 
 import Expr (Identifier,Exp)
 import Data.List(intersperse)
+import Data.Maybe
 import Queue
 
 -- Environment
@@ -72,7 +73,7 @@ type Thread = Store -> SchedState -> (FinalAnswer, Store)
 data SchedState =
   SchedState {
    the_ready_queue :: Queue Thread,
-   the_final_answer :: FinalAnswer,
+   the_final_answer :: Maybe FinalAnswer,
    the_max_time_slice :: Integer,
    the_time_remaining :: Integer
   }
