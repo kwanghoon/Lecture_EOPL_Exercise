@@ -11,8 +11,8 @@ isempty queue = null queue
 enqueue :: Queue a -> a -> Queue a
 enqueue queue elem = queue ++ [elem]
 
-dequeue :: Queue a -> (a -> Queue a -> b) -> b 
-dequeue queue f = f (head queue) (tail queue)
+dequeueWithFun :: Queue a -> (a -> Queue a -> b) -> b 
+dequeueWithFun queue f = f (head queue) (tail queue)
   -- Note that dequeue is used in run_next_thread:Schedule.hs and
   -- singal_mutex:Semaphore.hs where
   --
@@ -27,6 +27,13 @@ dequeue queue f = f (head queue) (tail queue)
   --    let (head, queue') = dequeue queue in
   --      f head queue'.
   --
+
+
+-- Replaced by some nonstandard interface, dequeueWithFun. 
+dequeue :: Queue a -> (a, Queue a)
+dequeue q = if isempty q
+            then error "dequeue: fail to dequeue from the empty queue"
+            else (head q, tail q)
   
   
 

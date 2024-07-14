@@ -43,7 +43,7 @@ signal_mutex mutex thread store sched =
      then if isempty q
              then let store' = setref store ref_to_closed (Bool_Val False)
                   in  thread store' sched
-             else dequeue q
+             else dequeueWithFun q
                     (\first_waiting_thread other_waiting_threads store1 sched1 ->
                        let sched1' = place_on_ready_queue first_waiting_thread sched1
                            store1' = setref store1 ref_to_wait_queue

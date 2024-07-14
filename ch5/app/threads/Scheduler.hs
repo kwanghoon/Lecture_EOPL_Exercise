@@ -26,7 +26,7 @@ run_next_thread store scState =
   if isempty (the_ready_queue scState)
   then (fromJust (the_final_answer scState), store)
   else
-    dequeue (the_ready_queue scState)
+    dequeueWithFun (the_ready_queue scState)
      (\first_ready_thread other_ready_threads ->
         first_ready_thread
           store
