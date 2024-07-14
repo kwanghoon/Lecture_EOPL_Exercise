@@ -29,8 +29,8 @@ data Cont =
   | Signal_Cont Cont
   | End_Subthread_Cont
 
-apply_cont :: Store -> SchedState -> Cont -> ExpVal -> (FinalAnswer, Store)
-apply_cont store sched cont val =
+apply_cont :: Cont -> ExpVal -> Store -> SchedState -> (FinalAnswer, Store)
+apply_cont cont val store sched =
   if time_expired sched
   then
     let sched' = error "TODO: implement place this on the ready queue"
@@ -38,49 +38,49 @@ apply_cont store sched cont val =
     
   else
     let sched' = error "TODO: implement the decrement of the timer" 
-    in  apply_cont' store sched' cont val
+    in  apply_cont' cont val store sched'
     
   where
-    apply_cont' store sched End_Main_Thread_Cont v =
+    apply_cont' End_Main_Thread_Cont v store sched =
       error "TODO: implement an apply_cont' function"
 
-    apply_cont' store sched (Zero1_Cont cont) num1 =
+    apply_cont' (Zero1_Cont cont) num1 store sched =
       error "TODO: implement an apply_cont' function"
 
-    apply_cont' store sched (Let_Exp_Cont var body env cont) val1 =
+    apply_cont' (Let_Exp_Cont var body env cont) val1 store sched =
       error "TODO: implement an apply_cont' function"
 
-    apply_cont' store sched (If_Test_Cont exp2 exp3 env cont) v =
+    apply_cont' (If_Test_Cont exp2 exp3 env cont) v store sched =
       error "TODO: implement an apply_cont' function"
 
-    apply_cont' store sched (Diff1_Cont exp2 env cont) val1 =
+    apply_cont' (Diff1_Cont exp2 env cont) val1 store sched =
       error "TODO: implement an apply_cont' function"
 
-    apply_cont' store sched (Diff2_Cont val1 cont) val2 =
+    apply_cont' (Diff2_Cont val1 cont) val2 store sched =
       error "TODO: implement an apply_cont' function"
 
-    apply_cont' store sched (Unop_Arg_Cont op cont) val =
+    apply_cont' (Unop_Arg_Cont op cont) val store sched =
       error "TODO: implement an apply_cont' function"
 
-    apply_cont' store sched (Rator_Cont rand env cont) ratorVal =
+    apply_cont' (Rator_Cont rand env cont) ratorVal store sched =
       error "TODO: implement an apply_cont' function"
 
-    apply_cont' store sched (Rand_Cont ratorVal cont) randVal =
+    apply_cont' (Rand_Cont ratorVal cont) randVal store sched =
       error "TODO: implement an apply_cont' function"
 
-    apply_cont' store sched (Set_Rhs_Cont loc cont) val =
+    apply_cont' (Set_Rhs_Cont loc cont) val store sched =
       error "TODO: implement an apply_cont' function"
 
-    apply_cont' store sched (Spawn_Cont saved_cont) val =
+    apply_cont' (Spawn_Cont saved_cont) val store sched =
       error "TODO: implement an apply_cont' function"
 
-    apply_cont' store sched (Wait_Cont saved_cont) val =
+    apply_cont' (Wait_Cont saved_cont) val store sched =
       error "TODO: implement an apply_cont' function"
 
-    apply_cont' store sched (Signal_Cont saved_cont) val =
+    apply_cont' (Signal_Cont saved_cont) val store sched =
       error "TODO: implement an apply_cont' function"
 
-    apply_cont' store sched (End_Subthread_Cont) val =
+    apply_cont' (End_Subthread_Cont) val store sched =
       error "TODO: implement an apply_cont' function"
 
       
