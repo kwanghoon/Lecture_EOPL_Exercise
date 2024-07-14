@@ -165,6 +165,6 @@ value_of_program exp timeslice =
 initEnv = empty_env
 
 --
-apply_procedure_k :: Proc -> ExpVal -> Store -> SchedState -> Cont -> (FinalAnswer, Store)
-apply_procedure_k proc arg store sched cont =
+apply_procedure_k :: Proc -> ExpVal -> Cont -> Store -> SchedState -> (FinalAnswer, Store)
+apply_procedure_k proc arg cont store sched =
   error "TODO: implement an apply_procedure_k function"  
