@@ -97,60 +97,60 @@ apply_unop Cdr (List_Val (_:xs)) = error "TODO: implement an apply_unop function
 apply_unop Print v = trace (show v) $ List_Val []  -- Use this code instead of writing a monadic one.
 
 --
-value_of_k :: Exp -> Env -> Store -> SchedState -> Cont -> (FinalAnswer, Store)
+value_of_k :: Exp -> Env -> Cont -> Store -> SchedState -> (FinalAnswer, Store)
 
-value_of_k (Const_Exp n) env store sched cont =
+value_of_k (Const_Exp n) env cont store sched =
   error "TODO: implement a value_of_k function"  
 
-value_of_k (Const_List_Exp nums) env store sched cont =
+value_of_k (Const_List_Exp nums) env cont store sched =
   error "TODO: implement a value_of_k function"  
 
-value_of_k (Var_Exp var) env store sched cont =
+value_of_k (Var_Exp var) env cont store sched =
   error "TODO: implement a value_of_k function"  
 
-value_of_k (Diff_Exp exp1 exp2) env store sched cont =
+value_of_k (Diff_Exp exp1 exp2) env cont store sched =
   error "TODO: implement a value_of_k function"  
 
-value_of_k (Unary_Exp op exp1) env store sched cont =
+value_of_k (Unary_Exp op exp1) env cont store sched =
   error "TODO: implement a value_of_k function"  
   
-value_of_k (If_Exp exp1 exp2 exp3) env store sched cont =
+value_of_k (If_Exp exp1 exp2 exp3) env cont store sched =
   error "TODO: implement a value_of_k function"  
 
-value_of_k (Let_Exp var exp1 body) env store sched cont =
+value_of_k (Let_Exp var exp1 body) env cont store sched =
   error "TODO: implement a value_of_k function"  
 
-value_of_k (Letrec_Exp nameArgBodyList letrec_body) env store sched cont =
+value_of_k (Letrec_Exp nameArgBodyList letrec_body) env cont store sched =
   error "TODO: implement a value_of_k function"  
 
-value_of_k (Proc_Exp var body) env store sched cont =
+value_of_k (Proc_Exp var body) env cont store sched =
   error "TODO: implement a value_of_k function"  
 
-value_of_k (Call_Exp rator rand) env store sched cont =
+value_of_k (Call_Exp rator rand) env cont store sched =
   error "TODO: implement a value_of_k function"  
   
-value_of_k (Block_Exp [exp]) env store sched cont =
+value_of_k (Block_Exp [exp]) env cont store sched =
   error "TODO: implement a value_of_k function"  
 
-value_of_k (Block_Exp (exp:exps)) env store sched cont =
+value_of_k (Block_Exp (exp:exps)) env cont store sched =
   error "TODO: implement a value_of_k function"  
 
-value_of_k (Set_Exp x exp) env store sched cont =
+value_of_k (Set_Exp x exp) env cont store sched =
   error "TODO: implement a value_of_k function"  
 
-value_of_k (Spawn_Exp exp) env store sched cont =
+value_of_k (Spawn_Exp exp) env cont store sched =
   error "TODO: implement a value_of_k function"  
 
-value_of_k (Yield_Exp) env store sched cont =
+value_of_k (Yield_Exp) env cont store sched =
   error "TODO: implement a value_of_k function"  
 
-value_of_k (Mutex_Exp) env store sched cont =
+value_of_k (Mutex_Exp) env cont store sched =
   error "TODO: implement a value_of_k function"  
 
-value_of_k (Wait_Exp exp) env store sched cont =
+value_of_k (Wait_Exp exp) env cont store sched =
   error "TODO: implement a value_of_k function"  
 
-value_of_k (Signal_Exp exp) env store sched cont =
+value_of_k (Signal_Exp exp) env cont store sched =
   error "TODO: implement a value_of_k function"  
 
 
