@@ -5,7 +5,7 @@ in let
                 loop(k) = if zero?(k) 
                           then set buffer = n
                           else begin
-                                       print(-(k,-100));
+                                       print(-(k,-200));
                                        yield();
                                        (loop -(k,1))
                                end
@@ -13,7 +13,7 @@ in let
 in let consumer = proc (d) letrec
                      busywait (k) = if zero?(buffer)
                                    then begin
-                                         print(-(k,-200));
+                                         print(-(k,-100));
                                          yield();
                                          (busywait -(k,-1))
                                         end
