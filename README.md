@@ -1,44 +1,5 @@
-# The Essentials of Programming Languages (EOPL) in Haskell
-
-## What is EOPL?
- - Essentials of Programming Languages: A book on programming language semantics featuring a series of small yet intriguing programming languages and interpreters, all written in Scheme.
- - https://eopl3.com/
- - https://github.com/mwand/eopl3
-
-## A series of EOPL interpreters developed in Haskell. 
- - This repository hosts exercises designed for students to complete, with solutions provided separately.
-
-#### Chapter 0. Overview
- - [Fundamentals of Haskell Programming](https://docs.google.com/presentation/d/1fhXvoLHFgYE4AOfdl4MD_Puk7Vbj-8eKqquTi7b0t9I/edit?usp=sharing)
- - [An overview of PLs](https://docs.google.com/presentation/d/1IG6xe4I1ao00jfyn-JGGBOQx3sWKLbf67eODpfxEXN0/edit?usp=sharing)
-
-#### [Chapter 1. Inductive Sets of Data](https://docs.google.com/presentation/d/1enC8Pp3dACVOm9VIc1lbJkUWfmLzGdE0237Aj5bARqg/edit?usp=sharing)
- - 
-
-#### [Chapter 2. Data Abstraction](https://docs.google.com/presentation/d/1-y8zQLRDkqOtClr6bLyMXvyBJIUbyScQJFfeH_D8rjk/edit?usp=sharing)
- - 
-
-#### [Chapter 3. Expressions](https://docs.google.com/presentation/d/1ZU9TEcEN9BEZoBmavD_Ivvt39TXUnbsXqZHdJBvba1k/edit?usp=sharing)
- - Let 
- - Proc 
- - Letrec
-
-
-#### [Chapter 4. States](https://docs.google.com/presentation/d/1ZxFuia-KHExNJlXJXR7iEMQ_P7gVmAweVIVglJM7Ytg/edit?usp=sharing)
- - Explicit-ref
- - Implicit-ref
-
-#### [Chapter 5. Continuation](https://docs.google.com/presentation/d/1I2Wl277VQRH2h8n-jc1W8IHnXNL5d_pzILJI07eRI6Y/edit?usp=sharing)
-
- - LetrecCPS
- - Exceptions
- - Threads
-
-#### [Chapter 7. Types](https://docs.google.com/presentation/d/1Jl8IkUpaIn5Mtmd6kKeSiBLpvWwO6RjMoMq4brT8Oc8/edit?usp=sharing)
- - Checked
-
-#### Chapter 9. Classes and Objects
- - Classes
+# Exercise for The Essentials of Programming Languages (EOPL) in Haskell
+ - https://github.com/kwanghoon/Lecture_EOPL
 
 ## 빌드 및 실행 방법
  - cd ch3
