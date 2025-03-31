@@ -3,19 +3,22 @@ module Env where
 import Expr (Identifier,Exp)
 
 -- Environment
-type Env = [(Identifier,ExpVal)]
+data Env = Empty_Env 
+  | Extend_Env Identifier ExpVal Env
+    deriving (Show)
+
 
 empty_env :: Env
-empty_env = []
-
-apply_env :: Env -> Identifier -> ExpVal
-apply_env env x =
-  case [ v | (y,v) <- env, x==y ] of
-    []    -> error (x ++ " is not found.")
-    (v:_) -> v
+empty_env = Empty_Env
 
 extend_env :: Identifier -> ExpVal -> Env -> Env
-extend_env x v env = (x,v):env
+extend_env = Extend_Env
+
+apply_env :: Env -> Identifier -> ExpVal
+apply_env Empty_Env x = error (x ++ " is not found.")
+apply_env (Extend_Env y v env) x
+  | x == y   = v
+  | otherwise = apply_env env x
 
 
 -- Expressed values
