@@ -35,7 +35,7 @@ lexerSpec = LexerSpec
         ("\\="     , mkFn EQ),
         
         ("proc"      , mkFn PROC),
-	
+
         ("[a-zA-Z][a-zA-Z0-9]*"    , mkFn IDENTIFIER)
       ]
   } 

@@ -30,12 +30,10 @@ value_of_program :: Exp -> ExpVal
 
 value_of_program exp = error "TODO: implement a value_of_program function"
 
-
---
-initEnv = [ ("i", Num_Val 1)
-          , ("v", Num_Val 5)
-          , ("x", Num_Val 10)
-          ]
+initEnv :: Env
+initEnv = extend_env "i" (Num_Val 1) 
+            (extend_env "v" (Num_Val 5)
+              (extend_env "x" (Num_Val 10) empty_env))
 
           
 
