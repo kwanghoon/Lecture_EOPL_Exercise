@@ -1,6 +1,6 @@
 cabal-version: 1.12
 
--- This file has been generated from package.yaml by hpack version 0.36.0.
+-- This file has been generated from package.yaml by hpack version 0.38.0.
 --
 -- see: https://github.com/sol/hpack
 
@@ -38,7 +38,7 @@ library
   default-language: Haskell2010
 
 executable letlang-exe
-  main-is: Main.lhs
+  main-is: Main.hs
   other-modules:
       Env
       Expr
@@ -60,7 +60,7 @@ executable letlang-exe
   default-language: Haskell2010
 
 executable letreclang-exe
-  main-is: Main.lhs
+  main-is: Main.hs
   other-modules:
       Env
       Expr
@@ -81,7 +81,7 @@ executable letreclang-exe
   default-language: Haskell2010
 
 executable proclang-exe
-  main-is: Main.lhs
+  main-is: Main.hs
   other-modules:
       Env
       Expr

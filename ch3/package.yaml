@@ -30,7 +30,7 @@ library:
 
 executables:
   letlang-exe:
-    main:                Main.lhs
+    main:                Main.hs
     source-dirs:         
     - app/letlang
     ghc-options:
@@ -41,7 +41,7 @@ executables:
     - ch3
 
   proclang-exe:
-    main:                Main.lhs
+    main:                Main.hs
     source-dirs:         
     - app/proclang
     ghc-options:
@@ -52,7 +52,7 @@ executables:
     - ch3
 
   letreclang-exe:
-    main:                Main.lhs
+    main:                Main.hs
     source-dirs:         
     - app/letreclang
     ghc-options:
