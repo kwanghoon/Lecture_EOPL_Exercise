@@ -6,34 +6,34 @@ module Env where
 import Expr (Identifier,Exp)
 
 -- Environment
-data Env = Empty_Env 
-  | Extend_Env Identifier ExpVal Env
-    deriving (Show)
+-- [TODO] Complete data Env.
+--   data Env = 
+--     ...
+data Env = DummyEnv
+  deriving (Show)
 
 
 empty_env :: Env
-empty_env = Empty_Env
+empty_env = error "TODO: implement empty_env function"
 
 extend_env :: Identifier -> ExpVal -> Env -> Env
-extend_env = Extend_Env
+extend_env x v env = error "TODO: implement extend_env function"
 
 apply_env :: Env -> Identifier -> ExpVal
-apply_env Empty_Env x = error (x ++ " is not found.")
-apply_env (Extend_Env y v env) x
-  | x == y   = v
-  | otherwise = apply_env env x
+apply_env env x = error "TODO: implement apply_env function"
 
 
 -- Expressed values
-data ExpVal =
-    Num_Val {expval_num :: Int}
-  | Bool_Val {expval_bool :: Bool}
-  | Proc_Val {expval_proc :: Proc}
-
+-- [TODO] Complete data ExpVal.
+--   data ExpVal = 
+--     ...
+data ExpVal = DummyExpVal
+   
 instance Show ExpVal where
-  show (Num_Val num)   = show num
-  show (Bool_Val bool) = show bool
-  show (Proc_Val proc) = show "<proc>"
+   show DummyExpVal   = "DummyExpVal"
+--   show (Num_Val num)   = show num
+--   show (Bool_Val bool) = show bool
+--   show (Proc_Val proc) = show "<proc>"
 
 -- Denoted values
 type DenVal = ExpVal   
@@ -41,8 +41,8 @@ type DenVal = ExpVal
 -- Procedure values : data structures
 data Proc = Procedure {var :: Identifier, body :: Exp, saved_env :: Env}
 
-procedure :: Identifier -> Exp -> Env -> Proc
-procedure var body env = Procedure var body env
+-- procedure :: Identifier -> Exp -> Env -> Proc
+-- procedure var body env = Procedure var body env
 
 -- In Interp.hs
 -- apply_procedure :: Proc -> ExpVal -> ExpVal
