@@ -1,20 +1,32 @@
 {-# OPTIONS_GHC -Wno-unrecognised-pragmas #-}
 {-# HLINT ignore "Use camelCase" #-}
-module Expr(Program,Exp(..),Identifier) where
+module Expr where
 
 type Program = Exp
   
-data Exp =
-    Const_Exp  Int
-  | Diff_Exp   Exp Exp
-  | IsZero_Exp Exp
-  | If_Exp     Exp Exp Exp
-  | Var_Exp    Identifier
-  | Let_Exp    Identifier Exp Exp            -- let x = exp in exp 
-  | Letrec_Exp Identifier Identifier Exp Exp -- letrec f(arg) = ... recusive expr ... in ... f ... 
-  | Proc_Exp   Identifier Exp                -- proc (arg) exp 
-  | Call_Exp   Exp Exp                       -- call
+-- [TODO] Complete data Exp. 
+-- data Exp = 
+--       ... 
+data Exp = DummyExp
   deriving Show
 
 type Identifier = String
+
+const_exp n = error "TODO: implement a const_exp function" 
+diff_exp e1 e2 = error "TODO: implement a diff_exp function"
+
+iszero_exp e = error "TODO: implement a iszero_exp function" 
+
+if_exp e1 e2 e3 = error "TODO: implement a if_exp function" 
+
+var_exp s = error "TODO: implement a var_exp function" 
+
+let_exp x e1 e2 = error "TODO: implement a let_exp function" 
+
+letrec_exp f x e1 e2 = error "TODO: implement a letrec_exp function" 
+
+proc_exp x e = error "TODO: implement a proc_exp function" 
+
+call_exp e1 e2 = error "TODO: implement a call_exp function" 
+
 
