@@ -15,8 +15,8 @@ import Control.Exception(try, throw, SomeException)
 main :: IO ()
 main = 
   hspec $ do 
-    describe "exceptions" $ do
-      let atdir f = "checkedlang:" ++ f
+    describe "checkedlang" $ do
+      let atdir f = "" ++ f
       let TypeDeclTestSuite typechecker_tests' = typechecker_tests
 
       mapM_ 
